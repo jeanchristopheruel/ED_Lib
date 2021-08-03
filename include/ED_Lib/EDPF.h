@@ -17,7 +17,7 @@
 
 #include "ED.h"
 
-namespace ED {
+namespace EDLIB {
 #define MAX_GRAD_VALUE 128*256
 #define EPSILON 1.0
 

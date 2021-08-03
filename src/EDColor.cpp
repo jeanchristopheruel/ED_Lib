@@ -3,7 +3,7 @@
 
 using namespace cv;
 using namespace std;
-namespace ED {
+namespace EDLIB {
     EDColor::EDColor(Mat srcImage, int gradThresh, int anchor_thresh, double sigma, bool validateSegments) {
         inputImage = srcImage.clone();
 

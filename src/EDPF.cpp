@@ -3,7 +3,7 @@
 using namespace cv;
 using namespace std;
 
-namespace ED {
+namespace EDLIB {
     EDPF::EDPF(Mat srcImage)
             : ED(srcImage, PREWITT_OPERATOR, 11, 3) {
         // Validate Edge Segments

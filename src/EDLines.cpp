@@ -5,7 +5,7 @@
 using namespace cv;
 using namespace std;
 
-namespace ED {
+namespace EDLIB {
     EDLines::EDLines(Mat srcImage, double _line_error, int _min_line_len, double _max_distance_between_two_lines,
                      double _max_error)
             : ED(srcImage, SOBEL_OPERATOR, 36, 8) {

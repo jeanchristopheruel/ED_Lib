@@ -5,7 +5,7 @@
 using namespace cv;
 using namespace std;
 
-namespace ED {
+namespace EDLIB {
     ED::ED(Mat _srcImage, GradientOperator _op, int _gradThresh, int _anchorThresh, int _scanInterval, int _minPathLen,
            double _sigma, bool _sumFlag) {
         // Check parameters for sanity

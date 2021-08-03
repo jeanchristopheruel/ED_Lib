@@ -10,7 +10,7 @@ using namespace cv;
 using namespace std;
 using namespace cv::ximgproc;
 
-namespace ED {
+namespace EDLIB {
     int main(int argc, const char **argv) {
         cv::CommandLineParser parser(argc, argv,
                                      "{scale|1|}"

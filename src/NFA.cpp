@@ -2,7 +2,7 @@
 #include <math.h>
 #include <float.h>
 
-namespace ED {
+namespace EDLIB {
     NFALUT::NFALUT(int size, double _prob, double _logNT) {
         LUTSize = size;
         LUT = new int[LUTSize];

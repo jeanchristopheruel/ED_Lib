@@ -33,7 +33,7 @@
 #define _EDColor_
 
 #include <opencv2/core.hpp>
-namespace ED {
+namespace EDLIB {
 // Look up table size for fast color space conversion
 #define LUT_SIZE (1024*4096)
 

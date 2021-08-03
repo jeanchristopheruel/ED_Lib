@@ -1,7 +1,7 @@
 #ifndef _NFA_
 #define _NFA_
 
-namespace ED {
+namespace EDLIB {
 #define TABSIZE 100000
 
 //----------------------------------------------

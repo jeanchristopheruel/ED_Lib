@@ -4,7 +4,7 @@
 
 using namespace cv;
 using namespace std;
-namespace ED {
+namespace EDLIB {
     int main() {
         //***************************** ED Edge Segment Detection *****************************
         //Detection of edge segments from an input image

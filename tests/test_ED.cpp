@@ -7,7 +7,7 @@ using namespace cv;
 using namespace std;
 using namespace cv::ximgproc;
 
-namespace ED {
+namespace EDLIB {
     int main(int argc, char **argv) {
         char *filename;
         if (argc > 1)

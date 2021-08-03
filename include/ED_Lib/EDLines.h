@@ -19,7 +19,7 @@
 #include "EDColor.h"
 #include "NFA.h"
 
-namespace ED {
+namespace EDLIB {
 #define SS 0
 #define SE 1
 #define ES 2

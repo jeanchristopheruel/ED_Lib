@@ -2,7 +2,7 @@
 
 using namespace cv;
 using namespace std;
-namespace ED {
+namespace EDLIB {
     EDCircles::EDCircles(Mat srcImage)
             : EDPF(srcImage) {
         // Arcs & circles to be detected

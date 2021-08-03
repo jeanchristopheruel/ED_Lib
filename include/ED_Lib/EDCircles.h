@@ -18,7 +18,7 @@
 #include "EDPF.h"
 #include "EDLines.h"
 
-namespace ED {
+namespace EDLIB {
 #define PI      3.141592653589793238462
 #define TWOPI  (2*PI)
 

@@ -19,7 +19,7 @@
 #include <opencv2/imgproc.hpp>
 #include "EDColor.h"
 
-namespace ED {
+namespace EDLIB {
 /// Special defines
 #define EDGE_VERTICAL   1
 #define EDGE_HORIZONTAL 2
