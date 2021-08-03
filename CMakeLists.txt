@@ -3,29 +3,31 @@ project(ED_Lib)
 
 set(CMAKE_CXX_STANDARD 11)
 
-find_package(OpenCV)
-include_directories(${OpenCV_INCLUDE_DIRS})
+#-------------------------------------------------------------------------------
+# CMAKE OPTIONS
+#-------------------------------------------------------------------------------
+option(PACKAGE_TESTS "Build the tests" OFF)
 
-add_library(EDLib STATIC
-        ED.cpp
-        ED.h
-        EDCircles.cpp
-        EDCircles.h
-        EDColor.cpp
-        EDColor.h
-        EDLib.h
-        EDLines.cpp
-        EDLines.h
-        EDPF.cpp
-        EDPF.h
-        NFA.cpp
-        NFA.h)
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    add_definitions(-DDEBUG)
+endif()
 
-add_executable(test test.cpp)
-target_link_libraries(test ${OpenCV_LIBS} EDLib)
+#-------------------------------------------------------------------------------
+# EXTERNAL LIBRARIES
+#-------------------------------------------------------------------------------
+find_package(OpenCV 4.0 REQUIRED core imgproc)
 
-add_executable(test_ED test_ED.cpp)
-target_link_libraries(test_ED ${OpenCV_LIBS} EDLib)
+#-------------------------------------------------------------------------------
+# Build EDLib
+#-------------------------------------------------------------------------------
+file(GLOB EDLib_SRC src/*.cpp)
+add_library(EDLib SHARED ${EDLib_SRC})
+target_link_libraries(EDLib ${OpenCV_LIBS})
+target_include_directories(EDLib PUBLIC include/ ${OpenCV_INCLUDE_DIRS}/include)
 
-add_executable(video_test video_test.cpp)
-target_link_libraries(video_test ${OpenCV_LIBS} EDLib)
+#-------------------------------------------------------------------------------
+# Tests
+#-------------------------------------------------------------------------------
+if(PACKAGE_TESTS)
+    add_subdirectory(tests)
+endif()

@@ -1,0 +1,20 @@
+build/
+cmake-*
+.vscode/
+.eggs/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.a
+
+# Images and large files
+*.jpg
+*.png
+*.json
+!tests/assets/billiard.jpg
