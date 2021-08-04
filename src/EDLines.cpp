@@ -131,7 +131,8 @@ namespace EDLIB {
         int lutSize = (width + height) / 8;
         nfa = new NFALUT(lutSize, prob, logNT); // create look up table
 
-        ValidateLineSegments();
+        if (srcImg)
+            ValidateLineSegments();
 
         // Delete redundant space from lines
         // Pop them back
