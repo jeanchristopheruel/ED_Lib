@@ -1,8 +1,10 @@
 find_package(OpenCV 4.0 REQUIRED core imgproc imgcodecs)
 
-add_executable(test_1 test.cpp)
-target_link_libraries(test_1 ${OpenCV_LIBS} EDLib)
-target_include_directories(test_1 PUBLIC ${OpenCV_INCLUDE_DIRS})
+if (TARGET highgui)
+    add_executable(test_1 test.cpp)
+    target_link_libraries(test_1 ${OpenCV_LIBS} EDLib)
+    target_include_directories(test_1 PUBLIC ${OpenCV_INCLUDE_DIRS})
+endif()
 
 add_executable(test_ED test_ED.cpp)
 target_link_libraries(test_ED ${OpenCV_LIBS} EDLib)
