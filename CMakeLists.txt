@@ -15,12 +15,7 @@ endif()
 #-------------------------------------------------------------------------------
 # EXTERNAL LIBRARIES
 #-------------------------------------------------------------------------------
-if(PACKAGE_TESTS)
-    set(CV_MODULES core imgproc imgcodecs highgui)
-else()
-    set(CV_MODULES core imgproc)
-endif()
-find_package(OpenCV 4.0 REQUIRED ${CV_MODULES})
+find_package(OpenCV 4.0 REQUIRED)
 
 #-------------------------------------------------------------------------------
 # Build EDLib
