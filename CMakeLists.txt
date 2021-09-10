@@ -15,7 +15,12 @@ endif()
 #-------------------------------------------------------------------------------
 # EXTERNAL LIBRARIES
 #-------------------------------------------------------------------------------
-find_package(OpenCV 4.0 REQUIRED core imgproc)
+if(PACKAGE_TESTS)
+    set(CV_MODULES core imgproc imgcodecs)
+else()
+    set(CV_MODULES core imgproc)
+endif()
+find_package(OpenCV 4.0 REQUIRED ${CV_MODULES})
 
 #-------------------------------------------------------------------------------
 # Build EDLib
