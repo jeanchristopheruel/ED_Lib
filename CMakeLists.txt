@@ -16,7 +16,7 @@ endif()
 # EXTERNAL LIBRARIES
 #-------------------------------------------------------------------------------
 if(PACKAGE_TESTS)
-    set(CV_MODULES core imgproc imgcodecs)
+    set(CV_MODULES core imgproc imgcodecs highgui)
 else()
     set(CV_MODULES core imgproc)
 endif()
